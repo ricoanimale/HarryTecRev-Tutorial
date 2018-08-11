@@ -1,0 +1,16 @@
+[
+{
+  "modid": "htrtut",
+  "name": "HarryTecRev Tutorial",
+  "description": "A Minecraft 1.12.2 modding tutorial",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Richard", "Harry"],
+  "credits": "Harry Tech Reviews",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
