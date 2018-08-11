@@ -1,4 +1,4 @@
-package com.richardsearcy.htrtut.init;
+package com.richardsearcy.htrtut.util;
 
 public class Reference {
 

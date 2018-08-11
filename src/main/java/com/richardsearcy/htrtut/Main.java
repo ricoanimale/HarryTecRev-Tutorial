@@ -1,6 +1,6 @@
 package com.richardsearcy.htrtut;
 
-import com.richardsearcy.htrtut.init.Reference;
+import com.richardsearcy.htrtut.util.Reference;
 import com.richardsearcy.htrtut.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
