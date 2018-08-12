@@ -1,7 +1,9 @@
 package com.richardsearcy.htrtut;
 
+import com.richardsearcy.htrtut.tabs.TutorialTab;
 import com.richardsearcy.htrtut.util.Reference;
 import com.richardsearcy.htrtut.proxy.CommonProxy;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -11,6 +13,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 // Setup the mod annotation
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
+
+    public static final CreativeTabs tutorialtab = new TutorialTab("tutorialtab");
 
     // Set up the proxies
     @SidedProxy(clientSide = Reference.CLIENTPROXY, serverSide = Reference.COMMONPROXY)

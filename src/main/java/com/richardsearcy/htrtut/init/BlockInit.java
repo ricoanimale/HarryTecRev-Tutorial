@@ -1,5 +1,6 @@
 package com.richardsearcy.htrtut.init;
 
+import com.richardsearcy.htrtut.Main;
 import com.richardsearcy.htrtut.init.blocks.CustomOre;
 import com.richardsearcy.htrtut.util.Reference;
 import net.minecraft.block.Block;
@@ -33,7 +34,7 @@ public class BlockInit {
         ForgeRegistries.BLOCKS.register(block);
 
         // Set the creative tab for the new block
-        block.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+        block.setCreativeTab(Main.tutorialtab);
 
         // Create an itemblock for the block
         ItemBlock item = new ItemBlock(block);
