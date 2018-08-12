@@ -1,2 +1,5 @@
 // Items
 item.tutorial_ingot.name=Tutorial Ingot
+
+// Ores
+tile.tutorial_ore.name=Tutorial Ore

@@ -9,6 +9,7 @@ public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent event) {
 
+        // Call the RegistryHandler Common method
         RegistryHandler.Common();
     }
 
