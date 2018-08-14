@@ -6,3 +6,16 @@ tile.tutorial_ore.name=Tutorial Ore
 
 // Tabs
 itemGroup.tutorialtab=Tutorial Mod
+
+// Armor
+item.tutorial_helmet.name=Tutorial Helmet
+item.tutorial_chestplate.name=Tutorial Chestplate
+item.tutorial_leggings.name=Tutorial Leggings
+item.tutorial_boots.name=Tutorial Boots
+
+// Tools
+item.tutorial_pickaxe.name=Tutorial Pickaxe
+item.tutorial_axe.name=Tutorial Axe
+item.tutorial_hoe.name=Tutorial Hoe
+item.tutorial_shovel.name=Tutorial Shovel
+item.tutorial_sword.name=Tutorial Sword
