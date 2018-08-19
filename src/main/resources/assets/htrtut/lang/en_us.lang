@@ -4,6 +4,9 @@ item.tutorial_ingot.name=Tutorial Ingot
 // Ores
 tile.tutorial_ore.name=Tutorial Ore
 
+// Blocks
+tile.tutorial_block.name=Tutorial Block
+
 // Tabs
 itemGroup.tutorialtab=Tutorial Mod
 

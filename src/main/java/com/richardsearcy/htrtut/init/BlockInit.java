@@ -1,6 +1,7 @@
 package com.richardsearcy.htrtut.init;
 
 import com.richardsearcy.htrtut.Main;
+import com.richardsearcy.htrtut.init.blocks.CustomIngotBlock;
 import com.richardsearcy.htrtut.init.blocks.CustomOre;
 import com.richardsearcy.htrtut.util.Reference;
 import net.minecraft.block.Block;
@@ -16,16 +17,26 @@ public class BlockInit {
     // Create a new block named tutorial_ore
     public static Block tutorial_ore;
 
+    // Create a new block named tutorial_block
+    public static Block tutorial_block;
+
     public static void init() {
 
         // Initialize the new block tutorial_ore
         tutorial_ore = new CustomOre("tutorial_ore", 2.0F, 4.0F, 2);
+
+        // Initialize the new block tutorial_block
+        tutorial_block = new CustomIngotBlock("tutorial_block", 2.5F, 4.5F, 2);
+
     }
 
     public static void register() {
 
         // Call the registerBlock method to register tutorial_ore
         registerBlock(tutorial_ore);
+
+        // Call the registerBlock method to register the tutorial_block
+        registerBlock(tutorial_block);
     }
 
     public static void registerBlock(Block block) {
@@ -48,8 +59,11 @@ public class BlockInit {
 
     public static void registerRenders () {
 
-        // Call the registerRender method
+        // Call the registerRender method for tutorial_ore
         registerRender(tutorial_ore);
+
+        // Call the registerRender method for tutorial_block
+        registerRender(tutorial_block);
     }
 
     public static void registerRender(Block block) {

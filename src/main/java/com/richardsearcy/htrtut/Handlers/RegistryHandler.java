@@ -11,6 +11,9 @@ public class RegistryHandler {
 
         // Call the BlockInit registerRenders method
         BlockInit.registerRenders();
+
+        RecipeHandler.registerCrafting();
+        RecipeHandler.registerSmelting();
     }
 
     public static void Common() {
