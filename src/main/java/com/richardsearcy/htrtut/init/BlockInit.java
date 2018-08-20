@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class BlockInit {
@@ -59,9 +60,11 @@ public class BlockInit {
 
         // Register the itemblock (as an item)
         ForgeRegistries.ITEMS.register(item);
+
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
     }
 
-    public static void registerRenders () {
+    /*public static void registerRenders () {
 
         // Call the registerRender method for tutorial_ore
         registerRender(tutorial_ore);
@@ -77,5 +80,5 @@ public class BlockInit {
         // Register the block renderer
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(Reference.MODID + ":" + block.getUnlocalizedName().substring(5)));
 
-    }
+    }*/
 }

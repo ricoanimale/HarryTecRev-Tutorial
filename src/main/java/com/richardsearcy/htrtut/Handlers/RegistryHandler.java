@@ -12,7 +12,7 @@ public class RegistryHandler {
     public static void Client() {
 
         // Call the BlockInit registerRenders method
-        BlockInit.registerRenders();
+        // BlockInit.registerRenders();
 
         RecipeHandler.registerCrafting();
         RecipeHandler.registerSmelting();
