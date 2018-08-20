@@ -3,6 +3,8 @@ item.tutorial_ingot.name=Tutorial Ingot
 
 // Ores
 tile.tutorial_ore.name=Tutorial Ore
+tile.tutorial_ore_nether.name=Tutorial Ore Nether
+tile.tutorial_ore_end.name=Tutorial Ore End
 
 // Blocks
 tile.tutorial_block.name=Tutorial Block

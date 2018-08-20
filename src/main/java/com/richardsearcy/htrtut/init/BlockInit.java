@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 public class BlockInit {
 
     // Create a new block named tutorial_ore
-    public static Block tutorial_ore;
+    public static Block tutorial_ore, tutorial_ore_nether, tutorial_ore_end;
 
     // Create a new block named tutorial_block
     public static Block tutorial_block;
@@ -24,6 +24,8 @@ public class BlockInit {
 
         // Initialize the new block tutorial_ore
         tutorial_ore = new CustomOre("tutorial_ore", 2.0F, 4.0F, 2);
+        tutorial_ore_nether = new CustomOre("tutorial_ore_nether", 2.0F, 4.0F, 2);
+        tutorial_ore_end = new CustomOre("tutorial_ore_end", 2.0F, 4.0F, 2);
 
         // Initialize the new block tutorial_block
         tutorial_block = new CustomIngotBlock("tutorial_block", 2.5F, 4.5F, 2);
@@ -34,6 +36,8 @@ public class BlockInit {
 
         // Call the registerBlock method to register tutorial_ore
         registerBlock(tutorial_ore);
+        registerBlock(tutorial_ore_nether);
+        registerBlock(tutorial_ore_end);
 
         // Call the registerBlock method to register the tutorial_block
         registerBlock(tutorial_block);
@@ -61,6 +65,8 @@ public class BlockInit {
 
         // Call the registerRender method for tutorial_ore
         registerRender(tutorial_ore);
+        registerRender(tutorial_ore_nether);
+        registerRender(tutorial_ore_end);
 
         // Call the registerRender method for tutorial_block
         registerRender(tutorial_block);

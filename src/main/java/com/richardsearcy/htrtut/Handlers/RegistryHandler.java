@@ -1,9 +1,11 @@
 package com.richardsearcy.htrtut.Handlers;
 
+import com.richardsearcy.htrtut.gen.TutorialOreGen;
 import com.richardsearcy.htrtut.init.ArmorInit;
 import com.richardsearcy.htrtut.init.BlockInit;
 import com.richardsearcy.htrtut.init.ItemInit;
 import com.richardsearcy.htrtut.init.ToolInit;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class RegistryHandler {
 
@@ -30,5 +32,8 @@ public class RegistryHandler {
 
         ArmorInit.init();
         ArmorInit.register();
+
+        // Register the tutorial ore generator
+        GameRegistry.registerWorldGenerator(new TutorialOreGen(), 0);
     }
 }
