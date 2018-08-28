@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=bottom": { "model": "htrtut:tutorial_slab_bottom" },
+    "half=top": { "model": "htrtut:tutorial_slab_top" }
+  }
+}

@@ -8,6 +8,9 @@ tile.tutorial_ore_end.name=Tutorial Ore End
 
 // Blocks
 tile.tutorial_block.name=Tutorial Block
+tile.tutorial_stairs.name=Tutorial Stairs
+tile.tutorial_slab_half.name=Tutorial Slab
+tile.tutorial_slab_double.name=Tutorial Double Slab
 
 // Tabs
 itemGroup.tutorialtab=Tutorial Mod

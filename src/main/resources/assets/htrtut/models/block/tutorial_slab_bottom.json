@@ -1,0 +1,8 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "htrtut:blocks/tutorial_block",
+    "top": "htrtut:blocks/tutorial_block",
+    "side": "htrtut:blocks/tutorial_block"
+  }
+}
