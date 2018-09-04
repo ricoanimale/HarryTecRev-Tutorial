@@ -4,14 +4,14 @@ import com.richardsearcy.htrtut.Main;
 import com.richardsearcy.htrtut.init.blocks.CustomBlockStairs;
 import com.richardsearcy.htrtut.init.blocks.CustomIngotBlock;
 import com.richardsearcy.htrtut.init.blocks.CustomOre;
+import com.richardsearcy.htrtut.init.blocks.activators.CustomBlockButton;
+import com.richardsearcy.htrtut.init.blocks.activators.CustomBlockPressurePlate;
+import com.richardsearcy.htrtut.init.blocks.fence.CustomBlockFence;
+import com.richardsearcy.htrtut.init.blocks.fence.CustomBlockFenceGate;
 import com.richardsearcy.htrtut.init.blocks.slab.CustomBlockDoubleSlab;
 import com.richardsearcy.htrtut.init.blocks.slab.CustomBlockHalfSlab;
-import com.richardsearcy.htrtut.tabs.TutorialTab;
-import com.richardsearcy.htrtut.util.Reference;
 import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemSlab;
@@ -29,8 +29,17 @@ public class BlockInit {
     // Create a custom stair block
     public static Block tutorial_stairs;
 
+    // Custom slabs
     public static CustomBlockHalfSlab tutorial_slab_half;
     public static CustomBlockDoubleSlab tutorial_slab_double;
+
+    // Custom fence and gate
+    public static CustomBlockFence tutorial_fence;
+    public static CustomBlockFenceGate tutorial_fence_gate;
+
+    // Custom button and pressure plate
+    public static CustomBlockButton tutorial_button;
+    public static CustomBlockPressurePlate tutorial_pressure_plate;
 
     public static void init() {
 
@@ -45,8 +54,17 @@ public class BlockInit {
         // Initialize the new custom block tutorial stairs
         tutorial_stairs = new CustomBlockStairs("tutorial_stairs", tutorial_block.getDefaultState());
 
+        // Initialize the custom slabs
         tutorial_slab_half = new CustomBlockHalfSlab("tutorial_slab_half");
         tutorial_slab_double = new CustomBlockDoubleSlab("tutorial_slab_double");
+
+        // Initialize the custom fence and gate
+        tutorial_fence = new CustomBlockFence("tutorial_fence", 2.5F, 4.5F);
+        tutorial_fence_gate = new CustomBlockFenceGate("tutorial_fence_gate", 2.5F, 4.5F);
+
+        // Initialize the custom button and pressure plate
+        tutorial_button = new CustomBlockButton("tutorial_button", 2.5F, 4.5F);
+        tutorial_pressure_plate = new CustomBlockPressurePlate("tutorial_pressure_plate", 2.5F, 4.5F);
 
     }
 
@@ -63,8 +81,17 @@ public class BlockInit {
         // Call the registerBlock method to register the tutorial_stairs
         registerBlock(tutorial_stairs);
 
+        // Call the registerBlock method to register the slabs
         registerBlock(tutorial_slab_half, new ItemSlab(tutorial_slab_half, tutorial_slab_half, tutorial_slab_double));
         ForgeRegistries.BLOCKS.register(tutorial_slab_double);
+
+        // Call the registerBlock method to register the fence and gate
+        registerBlock(tutorial_fence);
+        registerBlock(tutorial_fence_gate);
+
+        // Call the registerBlock method to register the button and pressure plate
+        registerBlock(tutorial_button);
+        registerBlock(tutorial_pressure_plate);
     }
 
     public static void registerBlock(Block block) {

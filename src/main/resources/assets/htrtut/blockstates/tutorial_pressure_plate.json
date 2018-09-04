@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "htrtut:tutorial_pressure_plate_up" },
+    "powered=true": { "model": "htrtut:tutorial_pressure_plate_down" }
+  }
+}
