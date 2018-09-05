@@ -1,6 +1,6 @@
 package com.richardsearcy.htrtut.proxy;
 
-import com.richardsearcy.htrtut.Handlers.RegistryHandler;
+import com.richardsearcy.htrtut.handlers.RegistryHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

@@ -1,4 +1,4 @@
-package com.richardsearcy.htrtut.Handlers;
+package com.richardsearcy.htrtut.handlers;
 
 import com.richardsearcy.htrtut.gen.TutorialOreGen;
 import com.richardsearcy.htrtut.init.ArmorInit;
