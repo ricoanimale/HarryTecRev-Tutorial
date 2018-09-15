@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "variant=tutorial": {
+      "model": "htrtut:planks_tutorial"
+    },
+    "variant=aluminum": {
+      "model": "htrtut:planks_aluminum"
+    }
+  }
+}

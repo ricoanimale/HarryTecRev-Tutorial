@@ -1,6 +1,7 @@
 package com.richardsearcy.htrtut.init;
 
 import com.richardsearcy.htrtut.Main;
+import com.richardsearcy.htrtut.blocks.trees.CustomBlockPlanks;
 import com.richardsearcy.htrtut.init.blocks.CustomBlockStairs;
 import com.richardsearcy.htrtut.init.blocks.CustomIngotBlock;
 import com.richardsearcy.htrtut.init.blocks.CustomOre;
@@ -8,13 +9,16 @@ import com.richardsearcy.htrtut.init.blocks.activators.CustomBlockButton;
 import com.richardsearcy.htrtut.init.blocks.activators.CustomBlockPressurePlate;
 import com.richardsearcy.htrtut.init.blocks.fence.CustomBlockFence;
 import com.richardsearcy.htrtut.init.blocks.fence.CustomBlockFenceGate;
+import com.richardsearcy.htrtut.init.blocks.item.ItemBlockVariants;
 import com.richardsearcy.htrtut.init.blocks.slab.CustomBlockDoubleSlab;
 import com.richardsearcy.htrtut.init.blocks.slab.CustomBlockHalfSlab;
+import com.richardsearcy.htrtut.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemSlab;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
@@ -41,6 +45,9 @@ public class BlockInit {
     public static CustomBlockButton tutorial_button;
     public static CustomBlockPressurePlate tutorial_pressure_plate;
 
+    // Planks, leaves and logs
+    public static Block planks, leaves, log;
+
     public static void init() {
 
         // Initialize the new block tutorial_ore
@@ -65,6 +72,9 @@ public class BlockInit {
         // Initialize the custom button and pressure plate
         tutorial_button = new CustomBlockButton("tutorial_button", 2.5F, 4.5F);
         tutorial_pressure_plate = new CustomBlockPressurePlate("tutorial_pressure_plate", 2.5F, 4.5F);
+
+        // Initialize the custom planks, leaves and logs
+        planks = new CustomBlockPlanks("planks");
 
     }
 
@@ -92,8 +102,23 @@ public class BlockInit {
         // Call the registerBlock method to register the button and pressure plate
         registerBlock(tutorial_button);
         registerBlock(tutorial_pressure_plate);
+
+        // Call the registerBlockWithVariants(Block block, ItemBlock itemBlock) method to register the custom planks.
+        registerBlockWithVariants(planks, new ItemBlockVariants(planks));
     }
 
+    // For the custom planks
+    public static void registerRenders() {
+
+        // Loop through each value in CustomBlockPlanks.EnumType...
+        for(int i=0; i < CustomBlockPlanks.EnumType.values().length; i++) {
+            // Call the registerRender(Block block, int meta, String filename) method
+            // prepend "planks_" to each enum value - "planks_tutorial"
+            registerRender(planks, i, "planks_" + CustomBlockPlanks.EnumType.values()[i].getName());
+        }
+    }
+
+    // Register normal blocks
     public static void registerBlock(Block block) {
 
         // Register the new block
@@ -114,6 +139,7 @@ public class BlockInit {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
     }
 
+    // Register ItemBlocks
     public static void registerBlock(Block block, ItemBlock itemBlock) {
 
         ForgeRegistries.BLOCKS.register(block);
@@ -124,21 +150,19 @@ public class BlockInit {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
     }
 
-    /*public static void registerRenders () {
+    // Register blocks with several enum variants
+    public static void registerBlockWithVariants(Block block, ItemBlock itemBlock) {
 
-        // Call the registerRender method for tutorial_ore
-        registerRender(tutorial_ore);
-        registerRender(tutorial_ore_nether);
-        registerRender(tutorial_ore_end);
+        ForgeRegistries.BLOCKS.register(block);
+        block.setCreativeTab(Main.tutorialtab);
+        itemBlock.setRegistryName(block.getRegistryName());
+        ForgeRegistries.ITEMS.register(itemBlock);
 
-        // Call the registerRender method for tutorial_block
-        registerRender(tutorial_block);
     }
 
-    public static void registerRender(Block block) {
+    // Register the models for blocks with enum variants
+    public static void registerRender(Block block, int meta, String filename) {
 
-        // Register the block renderer
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(Reference.MODID + ":" + block.getUnlocalizedName().substring(5)));
-
-    }*/
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, new ModelResourceLocation(new ResourceLocation(Reference.MODID, filename), "inventory"));
+    }
 }
