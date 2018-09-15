@@ -26,6 +26,7 @@ public class RegistryHandler {
 
         BlockInit.init();
         BlockInit.register();
+        BlockInit.registerRenders(); // Initialize and register custom planks
 
         ToolInit.init();
         ToolInit.register();

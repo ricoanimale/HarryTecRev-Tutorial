@@ -13,8 +13,10 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 
 import java.util.Random;
 
+/**
+ * TutorialOreGen class generates custom ores in the world
+ */
 public class TutorialOreGen implements IWorldGenerator {
-
 
     private WorldGenerator tutorial_ore, nether, end;
 
