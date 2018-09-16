@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "axis=x,variant=tutorial": { "model": "htrtut:log_tutorial" },
+    "axis=x,variant=aluminum": { "model": "htrtut:log_aluminum"},
+    "axis=y,variant=tutorial": { "model": "htrtut:log_tutorial" },
+    "axis=y,variant=aluminum": { "model": "htrtut:log_aluminum"},
+    "axis=z,variant=tutorial": { "model": "htrtut:log_tutorial" },
+    "axis=z,variant=aluminum": { "model": "htrtut:log_aluminum"},
+    "axis=none,variant=tutorial": { "model": "htrtut:log_tutorial" },
+    "axis=none,variant=aluminum": { "model": "htrtut:log_aluminum"}
+  }
+}

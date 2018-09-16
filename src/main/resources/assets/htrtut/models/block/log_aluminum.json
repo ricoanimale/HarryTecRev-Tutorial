@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "htrtut:blocks/log_aluminum_top",
+    "side": "htrtut:blocks/log_aluminum"
+  }
+}
