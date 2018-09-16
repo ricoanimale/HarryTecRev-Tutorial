@@ -1,6 +1,7 @@
 package com.richardsearcy.htrtut.init;
 
 import com.richardsearcy.htrtut.Main;
+import com.richardsearcy.htrtut.blocks.trees.CustomBlockLog;
 import com.richardsearcy.htrtut.blocks.trees.CustomBlockPlanks;
 import com.richardsearcy.htrtut.init.blocks.CustomBlockStairs;
 import com.richardsearcy.htrtut.init.blocks.CustomIngotBlock;
@@ -75,6 +76,7 @@ public class BlockInit {
 
         // Initialize the custom planks, leaves and logs
         planks = new CustomBlockPlanks("planks");
+        log = new CustomBlockLog("log");
 
     }
 
@@ -103,8 +105,9 @@ public class BlockInit {
         registerBlock(tutorial_button);
         registerBlock(tutorial_pressure_plate);
 
-        // Call the registerBlockWithVariants(Block block, ItemBlock itemBlock) method to register the custom planks.
+        // Call the registerBlockWithVariants(Block block, ItemBlock itemBlock) method to register the custom planks, leaves and logs.
         registerBlockWithVariants(planks, new ItemBlockVariants(planks));
+        registerBlockWithVariants(log, new ItemBlockVariants(log));
     }
 
     // For the custom planks
@@ -115,6 +118,7 @@ public class BlockInit {
             // Call the registerRender(Block block, int meta, String filename) method
             // prepend "planks_" to each enum value - "planks_tutorial"
             registerRender(planks, i, "planks_" + CustomBlockPlanks.EnumType.values()[i].getName());
+            registerRender(log, i, "log_" + CustomBlockPlanks.EnumType.values()[i].getName());
         }
     }
 

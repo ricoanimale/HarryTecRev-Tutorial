@@ -17,6 +17,8 @@ tile.tutorial_button.name=Tutorial Button
 tile.tutorial_pressure_plate.name=Tutorial Pressure Plate
 tile.planks_tutorial.name=Tutorial Planks
 tile.planks_aluminum.name=Aluminum Planks
+tile.log_tutorial.name=Tutorial Log
+tile.log_aluminum.name=Aluminum Log
 
 // Tabs
 itemGroup.tutorialtab=Tutorial Mod
