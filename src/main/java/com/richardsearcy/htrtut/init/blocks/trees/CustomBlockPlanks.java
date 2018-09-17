@@ -1,4 +1,4 @@
-package com.richardsearcy.htrtut.blocks.trees;
+package com.richardsearcy.htrtut.init.blocks.trees;
 
 import com.richardsearcy.htrtut.util.IMetaName;
 import net.minecraft.block.Block;
