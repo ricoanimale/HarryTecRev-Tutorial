@@ -1,8 +1,9 @@
 package com.richardsearcy.htrtut.init;
 
 import com.richardsearcy.htrtut.Main;
-import com.richardsearcy.htrtut.blocks.trees.CustomBlockLog;
-import com.richardsearcy.htrtut.blocks.trees.CustomBlockPlanks;
+import com.richardsearcy.htrtut.init.blocks.trees.CustomBlockLeaves;
+import com.richardsearcy.htrtut.init.blocks.trees.CustomBlockLog;
+import com.richardsearcy.htrtut.init.blocks.trees.CustomBlockPlanks;
 import com.richardsearcy.htrtut.init.blocks.CustomBlockStairs;
 import com.richardsearcy.htrtut.init.blocks.CustomIngotBlock;
 import com.richardsearcy.htrtut.init.blocks.CustomOre;
@@ -77,6 +78,7 @@ public class BlockInit {
         // Initialize the custom planks, leaves and logs
         planks = new CustomBlockPlanks("planks");
         log = new CustomBlockLog("log");
+        leaves = new CustomBlockLeaves("leaves");
 
     }
 
@@ -108,6 +110,7 @@ public class BlockInit {
         // Call the registerBlockWithVariants(Block block, ItemBlock itemBlock) method to register the custom planks, leaves and logs.
         registerBlockWithVariants(planks, new ItemBlockVariants(planks));
         registerBlockWithVariants(log, new ItemBlockVariants(log));
+        registerBlockWithVariants(leaves, new ItemBlockVariants(leaves));
     }
 
     // For the custom planks
@@ -119,6 +122,7 @@ public class BlockInit {
             // prepend "planks_" to each enum value - "planks_tutorial"
             registerRender(planks, i, "planks_" + CustomBlockPlanks.EnumType.values()[i].getName());
             registerRender(log, i, "log_" + CustomBlockPlanks.EnumType.values()[i].getName());
+            registerRender(leaves, i, "leaves_" + CustomBlockPlanks.EnumType.values()[i].getName());
         }
     }
 

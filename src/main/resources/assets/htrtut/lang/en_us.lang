@@ -19,6 +19,8 @@ tile.planks_tutorial.name=Tutorial Planks
 tile.planks_aluminum.name=Aluminum Planks
 tile.log_tutorial.name=Tutorial Log
 tile.log_aluminum.name=Aluminum Log
+tile.leaves_tutorial.name=Tutorial Leaves
+tile.leaves_aluminum.name=Aluminum Leaves
 
 // Tabs
 itemGroup.tutorialtab=Tutorial Mod
