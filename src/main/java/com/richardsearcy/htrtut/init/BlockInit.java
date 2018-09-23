@@ -14,6 +14,7 @@ import com.richardsearcy.htrtut.init.blocks.fence.CustomBlockFenceGate;
 import com.richardsearcy.htrtut.init.blocks.item.ItemBlockVariants;
 import com.richardsearcy.htrtut.init.blocks.slab.CustomBlockDoubleSlab;
 import com.richardsearcy.htrtut.init.blocks.slab.CustomBlockHalfSlab;
+import com.richardsearcy.htrtut.init.blocks.trees.CustomBlockSapling;
 import com.richardsearcy.htrtut.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -47,8 +48,8 @@ public class BlockInit {
     public static CustomBlockButton tutorial_button;
     public static CustomBlockPressurePlate tutorial_pressure_plate;
 
-    // Planks, leaves and logs
-    public static Block planks, leaves, log;
+    // Planks, leaves, logs and saplings
+    public static Block planks, leaves, log, sapling;
 
     public static void init() {
 
@@ -75,10 +76,11 @@ public class BlockInit {
         tutorial_button = new CustomBlockButton("tutorial_button", 2.5F, 4.5F);
         tutorial_pressure_plate = new CustomBlockPressurePlate("tutorial_pressure_plate", 2.5F, 4.5F);
 
-        // Initialize the custom planks, leaves and logs
+        // Initialize the custom planks, leaves, logs and saplings
         planks = new CustomBlockPlanks("planks");
         log = new CustomBlockLog("log");
         leaves = new CustomBlockLeaves("leaves");
+        sapling = new CustomBlockSapling("sapling");
 
     }
 
@@ -107,10 +109,11 @@ public class BlockInit {
         registerBlock(tutorial_button);
         registerBlock(tutorial_pressure_plate);
 
-        // Call the registerBlockWithVariants(Block block, ItemBlock itemBlock) method to register the custom planks, leaves and logs.
+        // Call the registerBlockWithVariants(Block block, ItemBlock itemBlock) method to register the custom planks, leaves,logs and sapling.
         registerBlockWithVariants(planks, new ItemBlockVariants(planks));
         registerBlockWithVariants(log, new ItemBlockVariants(log));
         registerBlockWithVariants(leaves, new ItemBlockVariants(leaves));
+        registerBlockWithVariants(sapling, new ItemBlockVariants(sapling));
     }
 
     // For the custom planks
@@ -123,6 +126,7 @@ public class BlockInit {
             registerRender(planks, i, "planks_" + CustomBlockPlanks.EnumType.values()[i].getName());
             registerRender(log, i, "log_" + CustomBlockPlanks.EnumType.values()[i].getName());
             registerRender(leaves, i, "leaves_" + CustomBlockPlanks.EnumType.values()[i].getName());
+            registerRender(sapling, i, "sapling_"+ CustomBlockPlanks.EnumType.values()[i].getName());
         }
     }
 
